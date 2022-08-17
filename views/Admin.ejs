@@ -1,0 +1,35 @@
+<%- include('partials/headeradmin.ejs') %> 
+<%- include('partials/navbaradmin.ejs') %> 
+    <div class="container" >
+        <div class="row">
+            <h1 class="h-primary center">Admins</h1>
+            <div class="col-lg-3">
+                <a href="/admin/add-admin"><button  class="add-btn">Add Admin</button></a>    
+            </div>
+            <div class="col-lg-3">
+                <a href="/admin/remove-admin"><button class="remove-btn">Remove Admin</button></a>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>User Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let a of admins){ %> 
+                    <tr>   
+                        <td><%= a.name %></td>
+                        <td><%= a.userName %> </td>
+                    </tr>
+                    <% } %> 
+                </tbody>
+            </table>
+            <div class="col-lg-3">
+                <a href="/admin"><button class="btn btn-primary"  id="btn">Sign Out</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

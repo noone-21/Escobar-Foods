@@ -1,0 +1,63 @@
+<%- include('partials/header.ejs') %> 
+<%- include('partials/navbar.ejs') %> 
+<div class="container home">
+	<div class="row">
+	  <div class="col-md-12 login" id="login">
+		
+		<div class="row">
+			<div class="col-sm-3">
+			  <h6 class="mb-0">Full Name</h6>
+			</div>
+			<div class="col-sm-9 text-secondary">
+			  <h6 class="Name"><%= user.firstName +" "+ user.lastName %> </h6>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="row">
+			<div class="col-sm-3">
+			  <h6 class="mb-0">Email</h6>
+			</div>
+			<div class="col-sm-9 text-secondary">
+			  <h6 class="Email"><%= user.email %> </h6>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="row">
+			<div class="col-sm-3">
+			  <h6 class="mb-0">Password</h6>
+			</div>
+			<div class="col-sm-9 text-secondary">
+			  <h6 class="Password" >*********</h6>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="row">
+			<div class="col-sm-3">
+			  <h6 class="mb-0">Phone No</h6>
+			</div>
+			<div class="col-sm-9 text-secondary">
+			  <h6 class="Phone"><%= user.phoneNo %> </h6>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="row">
+			<div class="col-sm-3">
+			  <h6 class="mb-0">Address</h6>
+			</div>
+			<div class="col-sm-9 text-secondary">
+				<h6 class="Address"><%= user.address %> </h6>
+			</div>
+		  </div>
+		  <hr>
+		  <div class="row">
+			<div class="col-sm-6">
+			  <a href="/profile/edit"><button  class="btn btn-primary" id="btn">Edit</button></a>
+			</div>
+			<div class="col-sm-6">
+				<a href="/login"><button  class="btn btn-primary"  id="btn">Log Out</button></a>
+			  </div>
+		  </div>
+	  </div>
+	</div>
+  </div>
+  <%- include('partials/footer.ejs') %> 

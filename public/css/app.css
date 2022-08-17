@@ -1,0 +1,341 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.0rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.d-flex{
+    margin-right: 40px;
+}
+
+/* Home Section */
+.home{
+    display: flex;
+    flex-direction: column;
+    /* padding:3px 200px; */
+    height: 550px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../Bg.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+.home h1{
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+.home p{
+    color:black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid;
+    background-color: #339933;
+    color:black;
+    border-color:#339933;
+    border-radius: 5px;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.btn:hover{
+    background-color:black;
+    color: #339933;
+}
+
+.center-f{
+    text-align: center;
+    background-color: black;
+}
+.center{
+    text-align: center;
+}
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 110%;
+    background-color:black;
+    color: grey;
+    text-align: center;
+  }
+
+/* LoginPage/Signup */
+
+#login{
+    background-color: lavender;
+    border-radius: 20px;
+    margin: 25px auto ;
+    padding: 20px;
+}
+#welcome{
+    margin: 100px  auto 5px auto;
+}
+.welcome{
+    margin-left: 5px;
+    font-weight: bolder;
+}
+#btn{
+    background-color:#0066cc;
+    color:whitesmoke;
+    border-color:#0066cc;
+    margin-left: 5px;
+}
+#btn:hover{
+    background-color:whitesmoke;
+    color: #0066cc;
+    border-color: #0066cc;
+}
+
+/* Menu Section */
+
+#categories img{
+    height: 200px;
+    padding: 40px;
+    margin-right: 20px;
+}
+#categories{
+     margin: 14px;
+    display: flex;
+    flex-direction:row;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 30px;
+    border-width: 30px;
+    border-color: black;
+}
+#categories .box{ 
+    border: 2px solid #339933;
+    padding: 20px;
+    margin: 2px 35px;
+    border-radius: 28px;
+    background: black;
+    margin-bottom: 20px;
+}
+
+#categories .box img{ 
+   height: 200px;
+   margin: auto;
+   display: block;
+}
+
+#categories .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+.box a{
+    text-decoration: none;
+}
+/* Contact Us */
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.contact::before{
+    content: "";
+    position: absolute;
+    background: url('../Bg.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+.img-c{
+    height: 250px;
+    border-radius: 100px;
+    width: 90%;
+}
+#contactUs{
+    padding: 50px 400px 50px 400px;
+
+}
+/* Admin */
+#admin{
+    background-color: whitesmoke;
+}
+.add-btn{
+    padding: 6px 20px;
+    border: 2px solid;
+    background-color: #339933;
+    color:black;
+    border-color:#339933;
+    border-radius: 5px;
+    margin: 17px;
+    font-size: 1.0rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.remove-btn{
+    padding: 6px 20px;
+    border: 2px solid;
+    background-color: red;
+    color:black;
+    border-color:red;
+    border-radius: 5px;
+    margin: 17px;
+    font-size: 1.0rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+/* Profile */
+.main-body {
+    padding: 15px;
+}
+.main-body::before{
+    content: "";
+    position: absolute;
+    background: url('../Bg.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+
+.me-2 {
+    margin-right: .5rem!important;
+}
+
+
+#CitemName{
+    visibility: hidden;
+}
+#Ccategory{
+    visibility: hidden;
+}

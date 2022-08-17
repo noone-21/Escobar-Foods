@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %> 
+<%- include('partials/navbar.ejs') %> 
+<div class="container home" id="container">
+  <div class="row">
+      <div class="col-lg-12 login" id="login" >
+        <form action="/Sign-Up" method="POST">
+          <h1 class="welcome">Sign Up!</h1>
+            <div class="row">
+              <div class="mb-3 col-lg-6 col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" required="required" class="form-control" placeholder="First name">
+              </div>
+              <div class="mb-3 col-lg-6 col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" required="required" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6 ">
+                <label for="email">Email</label>
+                <input type="email" name="email" required="required" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Email">
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="password">Password</label>
+                <input type="password" name="password" required="required" class="form-control" id="Password" placeholder="Password">
+              </div>
+              
+
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="phoneNo">Phone No</label>
+              <input type="phone" name="phoneNo" required="required" class="form-control" id="PhoneNo" placeholder="Phone No">
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="address">Address</label>
+              <input type="text" name="address" required="required" class="form-control" id="Address" placeholder="Address">
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary" id="btn">Sign Up</button>
+            </div>
+              <div class="col-md-12 ">
+                <label for="">Already Have an Account? <a href="/login">Login Here</a></label>
+            </div>
+        </form>
+        </div>
+
+      </div>
+  </div>
+<%- include('partials/footer.ejs') %> 

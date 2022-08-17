@@ -1,0 +1,30 @@
+<%- include('partials/headeradmin.ejs') %> 
+<%- include('partials/navbaradmin.ejs') %> 
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-6 login" id="login">
+      
+                <form action="/admin/remove-admin" method="POST">
+                  <h1 class="h-primary center" id ="welcome ">Delete Admin</h1>
+                  <div class="row">
+                    <div class="mb-3 col-md-12 col-lg-12">
+                      <label for="userName">User Name</label>
+                      <input type="text" name="userName" required="required" class="form-control" id="userName"  >
+                    </div>
+                    <div class="mb-3 col-md-12 col-lg-12">
+                      <label for="Password">Password</label>
+                      <input type="password" name="password" required="required" class="form-control" id="Password" >
+                    </div>
+                  </div>
+                    <div class="col-md-12 ">
+                      <button type="submit" class="remove-btn" >Delete</button>
+                    </div>
+                    </div>
+                  
+                </form>
+              </div>
+        </div>
+    </div>
+</body>
+
+</html>

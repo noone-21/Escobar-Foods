@@ -1,0 +1,60 @@
+<%- include('partials/headeradmin.ejs') %> 
+<%- include('partials/navbaradmin.ejs') %> 
+    <div class="container" >
+        <div class="row">
+            <h1 class="h-primary center">Orders</h1>
+            <div class="col-lg-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="h-secondary">Name</th>
+                            <th class="h-secondary">PhoneNo</th>
+                            <th class="h-secondary">Address</th>
+                            <th class="h-secondary">Order</th>
+                            <th class="h-secondary">Bill</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>  
+                            <td class="h-secondary"  id="Name"><%= user.firstName +" "+ user.lastName %> </td>
+                            <td class="h-secondary"  id="phoneNo"><%= user.phoneNo %>  </td>
+                            <td class="h-secondary"  id="address"><%= user.address %> </td>
+                                <td class="h-secondary"  id="order">
+                                    <% var bill=0 %> 
+                                    <% for(let cart of myCart){  %> 
+                                        <% if(cart.foodCategory=="Fast Food") {%> 
+                                            <% for(let cart1 of fastFood){ %> 
+                                            <% if(cart.foodName==cart1.foodName){ %> 
+                                            <%= cart1.foodName+"("+cart.foodQuantity+")"+"," %>
+                                            <% var bill=bill+(parseInt(cart.foodQuantity)*parseInt(cart1.price) )  %> 
+                                            <% } %> 
+                                            <% } %> 
+                                            <% } %> 
+                                            <%if(cart.foodCategory=="Desi"){ %> 
+                                                <% for(let cart1 of desi){ %> 
+                                                    <% if(cart.foodName==cart1.foodName){ %> 
+                                                <%= cart1.foodName+"("+cart.foodQuantity+")"+"," %>
+                                                <% var bill=bill+(parseInt(cart.foodQuantity)*parseInt(cart1.price))   %> 
+                                            <% } %> 
+                                            <% } %> 
+                                            <% } %> 
+                                            <%if(cart.foodCategory=="Chinese"){ %> 
+                                                <% for(let cart1 of chinese){ %> 
+                                                    <% if(cart.foodName==cart1.foodName){ %> 
+                                                <%= cart1.foodName+"("+cart.foodQuantity+")"+"," %> 
+                                                <% var bill=bill+(parseInt(cart.foodQuantity)*parseInt(cart1.price))   %> 
+                                            <% } %> 
+                                            <% } %> 
+                                            <% } %> 
+                                    <% } %> 
+                                </td>                
+                                <td class="h-secondary"  id="bill">Rs.<%= bill %>  </td>                
+                        </tr>               
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

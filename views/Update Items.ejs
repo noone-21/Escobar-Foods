@@ -1,0 +1,42 @@
+<%- include('partials/headeradmin.ejs') %> 
+<%- include('partials/navbaradmin.ejs') %> 
+<div class="container"  >
+    <div class="row" id="login">
+        <h1 class="h-primary center">Update Items</h1>
+        <form action="/admin/update-items" method="POST">
+            <div class="row">
+                <div class="mb-3 col-lg-6 ">
+                    <label for="foodName">Current Name</label>
+                    <input type="text" name="foodName" required="required" class="form-control" id="foodName" placeholder="Enter current Food Name">
+                  </div>
+                  <div class="mb-3 col-lg-6 ">
+                    <label for="categoryId">Category ID</label>
+                    <input type="text" name="categoryId" required="required" class="form-control" id="categoryId" placeholder="FastFood-1,Desi-2,Chinese-3">
+                  </div>
+                  <div class="mb-3 col-lg-6 ">
+                    <label for="newName">New Name</label>
+                    <input type="text" name="newName" required="required" class="form-control" id="newName" placeholder="Enter New Food Name">
+                  </div>
+                  <div class="mb-3 col-lg-6 ">
+                    <label for="price">New Price</label>
+                    <input type="text" name="price" required="required" class="form-control" id="price" placeholder="Enter New Price">
+                  </div>
+
+              </div>
+              <div class="col-md-12 ">
+                <button type="submit" class="btn btn-primary" id="btn">Update</button>
+              </div>
+        </form>
+        <script>
+            var addToCart=document.querySelectorAll('#btn')
+            addToCart.forEach((btn)=>{
+                btn.addEventListener('click',(e)=>{
+                    alert("Item Updated!")
+                })
+            })
+        </script>   
+    </div>
+</div>
+</body>
+
+</html>
